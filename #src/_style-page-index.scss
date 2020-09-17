@@ -1,0 +1,1618 @@
+//=============БЛОК-1===================================
+.info {
+  background: #2c2323;
+  &__row {
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+  }
+  &__item {
+    & a {
+      display: block;
+      @include font-param("SFUIDisplay", 18px, #ffffff, 300, 19px);
+      &:hover {
+        color: #d5bfb3;
+      }
+    }
+  }
+}
+
+//=============БЛОК-2===================================
+
+.shield {
+  position: relative;
+  padding: 110px 0;
+  background: url("../img/shield-bg.png") no-repeat center / cover, #ededed;
+  &__row {
+    position: relative;
+  }
+  &__reccircul {
+    position: absolute;
+    top: 24%;
+    left: 45%;
+  }
+  &__guarantee {
+    position: absolute;
+    left: 50%;
+    top: 29%;
+    z-index: 1;
+  }
+  &__group_2 {
+    margin-bottom: 70px;
+  }
+  &__group_3 {
+    display: flex;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    @include font-param("SFUIDisplay", 50px, #2c2323, 700, 72px);
+  }
+
+  &__title-2 {
+    margin-bottom: 30px;
+    @include font-param("SFUIDisplay", 74px, #267e96, 300, 74px);
+  }
+
+  &__subtitle {
+    margin-bottom: 80px;
+    @include font-param("SFUIDisplay", 30px, #2c2323, 300, 40px);
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 55px;
+    @include font-param("SFUIDisplay", 22px, #2c2323, 300, 24px);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+    &:first-child {
+      margin-bottom: 50px;
+      &::before {
+        width: 29px;
+        height: 39px;
+        background: url("../img/icon/icon-shield-1.png") no-repeat center / 100%;
+      }
+    }
+    &:nth-child(2) {
+      margin-bottom: 50px;
+      &::before {
+        width: 35px;
+        height: 35px;
+        background: url("../img/icon/icon-shield-2.png") no-repeat center / 100%;
+      }
+    }
+    &:nth-child(3) {
+      &::before {
+        width: 39px;
+        height: 42px;
+        background: url("../img/icon/icon-shield-3.png") no-repeat center / 100%;
+      }
+    }
+  }
+
+  &__button {
+    &:first-child {
+      margin-right: 30px;
+    }
+  }
+}
+
+//=============БЛОК-3===================================
+
+.advantages {
+  padding: 200px 0;
+  background-color: #267e96;
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__ttile {
+    text-align: center;
+    margin-bottom: 85px;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__column {
+    &:first-child {
+      flex: 1 1 400px;
+      & .advantages__item {
+        text-align: end;
+        &:first-child {
+          margin-bottom: 120px;
+          &::before {
+            left: auto;
+            right: -19%;
+            top: 36%;
+          }
+        }
+        &:nth-child(2) {
+          padding-right: 61px;
+          &::before {
+            left: auto;
+            right: -3%;
+            top: 27%;
+          }
+        }
+        &:last-child {
+          margin-top: 120px;
+          &::before {
+            left: auto;
+            right: -26%;
+            top: 35%;
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      & img {
+        max-width: 100%;
+      }
+    }
+    &:last-child {
+      flex: 1 1 400px;
+      & .advantages__item {
+        &:first-child {
+          margin-bottom: 55px;
+          &::before {
+            top: 20%;
+            left: -18%;
+          }
+        }
+        &:nth-child(2) {
+          font-size: 16px;
+          line-height: 24px;
+          padding-left: 61px;
+          &::before {
+            top: 38%;
+            left: -4%;
+          }
+        }
+        &:last-child {
+          margin-top: 55px;
+          &::before {
+            top: 18%;
+            left: -26%;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    @include font-param("SFUIDisplay", 18px, #ffffff, 300, 26px);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: 26px;
+      background: url("../img/icon/advantages-icon.png");
+    }
+  }
+}
+
+//=============БЛОК-4===================================
+
+.products {
+  padding: 110px 0 120px 0;
+  background: #f7f5f4;
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 1125px;
+    text-align: center;
+    color: #2c2323;
+    &:first-child {
+      margin-bottom: 60px;
+    }
+    &:last-of-type {
+      margin-top: 35px;
+      margin-bottom: 95px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    @include font-param("SFUIDisplay", 26px, #2c2323, 300, 28px);
+    margin-bottom: 80px;
+  }
+
+  &__group {
+  }
+}
+
+.group-1 {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 120px;
+  &__column {
+    flex: 0 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & img {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    @include font-param("SFUIDisplay", 18px, #2c2323, 300, 26px);
+  }
+}
+.group-2 {
+  display: flex;
+  justify-content: center;
+  margin: 0 -30px;
+  flex-wrap: wrap;
+  &__column {
+    display: flex;
+    margin-bottom: 60px;
+    padding: 0px 30px;
+    flex: 0 1 480px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 25px 50px 25px;
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+
+  &__name {
+    flex: 1 1 auto;
+    text-align: center;
+    margin-bottom: 50px;
+    @include font-param("SFUIDisplay", 22px, #2c2323, 500, 32px);
+  }
+
+  &__img {
+    height: 325px;
+    text-align: center;
+    margin-bottom: 35px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    @include font-param("SFUIDisplay", 15px, #2c2323, 300, 24px);
+  }
+
+  &__price {
+    margin: 40px 0;
+    text-align: center;
+    @include font-param("SFUIDisplay", 30px, #2c2323, 500, 32px);
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    & a {
+      padding: 20px 35px 20px 35px;
+    }
+    & .btn-red {
+      margin-right: 20px;
+    }
+    & .btn-brown {
+      margin-right: 0;
+    }
+  }
+}
+
+//=============БЛОК-5===================================
+
+.comparison {
+  padding: 115px 0 120px 0;
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+    color: #2c2323;
+    margin-bottom: 90px;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -6px;
+  }
+
+  &__column {
+    flex: 0 1 460px;
+    padding: 0 6px;
+
+    &:first-child {
+      .comparison__name {
+        background-color: #e9e5e4;
+      }
+      .comparison__text {
+        background-color: #f7f5f4;
+      }
+    }
+    &:nth-child(2) {
+      .comparison__name {
+        background-color: #f2f2f2;
+      }
+      .comparison__text {
+        border: 2px solid #f4f1f0;
+      }
+    }
+    &:last-child {
+      .comparison__name {
+        color: #267e96;
+        background-color: #b3d2da;
+      }
+      .comparison__text {
+        color: #267e96;
+        background-color: #dfecef;
+      }
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    padding: 0 20px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    @include font-param("SFUIDisplay", 20px, #2c2323, 500, 32px);
+  }
+
+  &__name_click {
+    display: none;
+  }
+
+  &__sup {
+    display: none;
+    @include font-param("SFUIDisplay", 16px, #2c2323, 300, 24px);
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    padding: 0 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    @include font-param("SFUIDisplay", 18px, #2c2323, 300, 32px);
+  }
+}
+
+//=============БЛОК-6===================================
+.consultation {
+  position: relative;
+  padding: 175px 0 350px 0;
+  background: url("../img/consultation-bg.png") no-repeat center / cover;
+  &__reccircul {
+    position: absolute;
+    top: 25%;
+    left: 61%;
+  }
+  &__row {
+    position: relative;
+  }
+
+  &__title {
+    color: #2c2323;
+    margin-bottom: 65px;
+  }
+
+  &__subtitle {
+    @include font-param("SFUIDisplay", 30px, #2c2323, 300, 44px);
+    margin-bottom: 110px;
+  }
+
+  &__form {
+  }
+}
+
+.form-contact {
+  &__field {
+    display: flex;
+    margin-bottom: 35px;
+    & input {
+      flex: 0 1 390px;
+      margin-right: 30px;
+      padding: 15px 0 15px 35px;
+      border-radius: 27px;
+      background-color: #ffffff;
+      @include font-param("SFUIDisplay", 17px, #2c2323, 300, 26px);
+    }
+  }
+
+  &__button {
+    padding: 15px 40px;
+    border-radius: 27px;
+    background-color: #da5b57;
+    @include font-param("SFUIDisplay", 17px, #ffffff, 300, 26px);
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: #fa932c;
+    }
+  }
+
+  &__check {
+    display: block;
+    position: relative;
+    max-width: 330px;
+    padding-left: 60px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+    @include font-param("SFUIDisplay", 15px, #2c2323, 300, 26px);
+    & a {
+      color: #2c2323;
+      border-bottom: 1px solid #2c2323;
+    }
+    & input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked ~ .form-contact__checkmark::after {
+        display: block;
+      }
+    }
+    & .form-contact__checkmark::after {
+      left: 12px;
+      top: 8px;
+      width: 11px;
+      height: 16px;
+      border: solid #da5b57;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__checkmark {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 35px;
+    width: 35px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+}
+
+//=============БЛОК-7===================================
+
+.certificate {
+  padding: 130px 0 120px 0;
+  &__row {
+  }
+
+  &__title {
+    color: #2c2323;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    @include font-param("SFUIDisplay", 26px, #2c2323, 300, 30px);
+    margin-bottom: 90px;
+  }
+
+  &__group {
+    display: flex;
+  }
+
+  &__slider {
+    position: relative;
+    flex: 0 1 50%;
+    min-width: 0;
+    padding: 0 25px;
+  }
+
+  &__slide {
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 50%;
+    padding: 0 25px;
+  }
+
+  &__item {
+    flex: 0 1 33.333%;
+    margin-bottom: 15px;
+  }
+
+  &__img {
+    height: 150px;
+    margin-bottom: 20px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    padding-right: 20px;
+    text-align: start;
+    @include font-param("SFUIDisplay", 15px, #2c2323, 300, 20px);
+  }
+}
+
+.slide {
+  &__image {
+    height: 490px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__name {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    @include font-param("SFUIDisplay", 14px, #2c2323, 300, 20px);
+  }
+}
+
+//=============БЛОК-8===================================
+
+.reviews {
+  padding: 110px 0 120px 0;
+  &__row {
+  }
+
+  &__title {
+    text-align: center;
+    color: #2c2323;
+    margin-bottom: 100px;
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__slide {
+    display: flex;
+  }
+
+  &__img {
+    padding: 0 30px;
+    flex: 0 1 50%;
+    height: 560px;
+    & img {
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__item {
+    padding: 0 30px;
+    flex: 0 1 50%;
+  }
+
+  &__name {
+    margin-bottom: 55px;
+    @include font-param("SFUIDisplay", 22px, #2c2323, 500, 32px);
+  }
+
+  &__text {
+    max-width: 600px;
+    @include font-param("SFUIDisplay", 18px, #2c2323, 300, 26px);
+    & p {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+//=============БЛОК-9===================================
+.quiz {
+  position: relative;
+  padding: 120px 0;
+  background: url("../img/quiz-bg.png") no-repeat center / cover;
+  &__reccircul {
+    position: absolute;
+    top: 67%;
+    left: 48%;
+  }
+  &__row {
+  }
+
+  &__title {
+    color: #2c2323;
+  }
+  &__subtitle {
+    @include font-param("SFUIDisplay", 30px, #2c2323, 300, 44px);
+    margin-bottom: 100px;
+  }
+  &__group {
+    display: flex;
+  }
+  &__lsit {
+    position: relative;
+    flex: 0 1 960px;
+    margin-top: 130px;
+    display: none;
+    &.current {
+      display: block;
+    }
+    &:nth-of-type(2) {
+      .quiz__progress-bar {
+        &::after {
+          width: 66.666%;
+        }
+        & span {
+          position: absolute;
+          left: 60%;
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      .quiz__progress-bar {
+        &::after {
+          width: 100%;
+        }
+        & span {
+          position: absolute;
+          left: auto;
+          right: 1%;
+        }
+      }
+    }
+  }
+
+  &__lsit_last {
+    margin-top: 114px;
+    .quiz__progress-bar {
+      &::after {
+        width: 100%;
+      }
+      & span {
+        position: absolute;
+        left: auto;
+        right: 1%;
+      }
+    }
+  }
+
+  &__question {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    @include font-param("SFUIDisplay", 30px, #2c2323, 300, 44px);
+    & span {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: center;
+      align-items: center;
+      margin-right: 35px;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background-color: #da5b57;
+      @include font-param("SFUIDisplay", 24px, #ffffff, 300, 44px);
+    }
+  }
+
+  &__progress-bar {
+    position: relative;
+    display: block;
+    max-width: 960px;
+    height: 50px;
+    margin-bottom: 90px;
+    @include font-param("SFUIDisplay", 15px, #267e96, 500, 50px);
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #e3dedc;
+      border-radius: 5px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 33.333%;
+      height: 5px;
+      background-color: #267e96;
+      border-radius: 3px;
+    }
+
+    & span {
+      position: absolute;
+      left: 30%;
+    }
+  }
+
+  &__answer {
+    margin: 0 -30px 150px -30px;
+    display: flex;
+    max-width: 960px;
+    flex-wrap: wrap;
+  }
+
+  &__option {
+    padding: 0 30px;
+    flex: 0 1 480px;
+  }
+
+  &__wrap {
+    position: relative;
+    cursor: pointer;
+    padding: 11px 20px 11px 40px;
+    margin-bottom: 60px;
+    border-radius: 30px;
+    background: #ffffff;
+    @include font-param("SFUIDisplay", 18px, #000000, 500, 32px);
+    transition: all 0.3s ease;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 24%;
+      left: 11%;
+      width: 14px;
+      height: 21px;
+      border: solid #ffffff;
+      border-width: 0 2px 2px 0;
+      opacity: 0;
+      transform: scale(0) rotate(45deg);
+      transition: all 0.3s ease;
+    }
+    &.active {
+      padding: 11px 20px 11px 80px;
+      color: #ffffff;
+      background: #267e96;
+      &::before {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__form {
+    margin-bottom: 80px;
+  }
+
+  &__text {
+    @include font-param("SFUIDisplay", 26px, #000000, 500, 44px);
+    margin-bottom: 80px;
+  }
+
+  &__bonus {
+    display: flex;
+    align-items: center;
+  }
+
+  &__bonus-text {
+    position: relative;
+    @include font-param("SFUIDisplay", 18px, #000000, 300, 22px);
+    &:first-child {
+      padding-left: 130px;
+      margin-right: 100px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 89px;
+        height: 46px;
+        background: url("../img/icon/quiz-filter.png") no-repeat center / 100%;
+      }
+    }
+    &:last-child {
+      padding-left: 90px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -14px;
+        left: 0;
+        width: 52px;
+        height: 53px;
+        background: url("../img/icon/quiz-garant.png") no-repeat center / 100%;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+  }
+  &__finish {
+    & a {
+      padding: 19px 50px 19px 50px;
+    }
+  }
+  &__next {
+    margin-right: 20px;
+    & a {
+      padding: 19px 50px 19px 50px;
+    }
+  }
+}
+
+//=============БЛОК-10===================================
+.delivery {
+  padding: 170px 0 240px 0;
+  background: url("../img/delivery-bg.png") no-repeat center / contain;
+  &__row {
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+    color: #2c2323;
+    margin-bottom: 50px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    max-width: 960px;
+    margin-bottom: 170px;
+    @include font-param("SFUIDisplay", 26px, #2c2323, 300, 36px);
+  }
+
+  &__slider {
+    margin-bottom: 140px;
+  }
+
+  &__img {
+    flex: 0 1 120px;
+    height: 80px;
+    min-width: 0;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 310px;
+    & img {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__text {
+    flex-grow: 1;
+    text-align: center;
+    @include font-param("SFUIDisplay", 18px, #2c2323, 300, 26px);
+  }
+}
+
+//=============БЛОК-11===================================
+.price {
+  padding: 130px 0 140px 0;
+  background: url("../img/price-bg.png") no-repeat center / cover;
+  &__row {
+  }
+
+  &__title {
+    max-width: 770px;
+    color: #2c2323;
+    margin-bottom: 85px;
+  }
+
+  &__form {
+  }
+}
+
+.from-price {
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    max-width: 800px;
+    margin-bottom: 25px;
+    & input {
+      flex: 1 1 auto;
+      padding: 15px 0 15px 35px;
+      border-radius: 27px;
+      background-color: #ffffff;
+      @include font-param("SFUIDisplay", 17px, #2c2323, 300, 26px);
+      &::placeholder {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__select {
+  }
+
+  &__wrap {
+    flex: 0 1 390px;
+    display: flex;
+    padding: 15px;
+  }
+  &__check {
+    margin-bottom: 40px;
+    @extend .form-contact__check;
+  }
+
+  &__checkmark {
+    @extend .form-contact__checkmark;
+  }
+
+  &__button {
+    @extend .form-contact__button;
+  }
+}
+.select {
+  position: relative;
+  flex: 0 1 390px;
+  & select {
+    display: none;
+  }
+  &__input {
+    position: relative;
+    cursor: pointer;
+    padding: 15px 0 15px 35px;
+    border-radius: 27px;
+    background-color: #ffffff;
+    & span {
+      position: absolute;
+      right: 35px;
+      top: 25px;
+      width: 20px;
+      height: 9px;
+      background: url("../img/icon/arrow-select.png") no-repeat;
+    }
+  }
+
+  &__text {
+    opacity: 0.5;
+    @include font-param("SFUIDisplay", 17px, #2c2323, 300, 26px);
+  }
+
+  &__menu {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 27px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+  }
+
+  &__option {
+    padding: 15px 0 15px 35px;
+    @include font-param("SFUIDisplay", 17px, #2c2323, 300, 26px);
+    transition: all 0.3s ease;
+    &:first-child {
+      border-radius: 27px 27px 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 27px 27px;
+    }
+    &:hover {
+      color: #ffffff;
+      background: #267e96;
+    }
+  }
+  &__option_selected {
+    color: #ffffff;
+    background: #267e96;
+  }
+}
+//=============БЛОК-11===================================
+.transfer {
+  padding: 110px 0 120px 0;
+  &__row {
+  }
+
+  &__title {
+    color: #2c2323;
+    text-align: center;
+    margin-bottom: 90px;
+  }
+
+  &__slider {
+    position: relative;
+    display: flex;
+  }
+
+  &__slide {
+    flex: 0 1 480px;
+    padding: 0 30px;
+  }
+
+  &__img {
+    max-width: 420px;
+    height: 425px;
+    & img {
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+//=============БЛОК-12===================================
+.production {
+  padding: 110px 0 130px 0;
+  background-color: #f7f5f4;
+  &__row {
+  }
+
+  &__title {
+    color: #2c2323;
+    text-align: center;
+    margin-bottom: 95px;
+  }
+
+  &__group {
+    display: flex;
+  }
+
+  &__wrap {
+    flex: 0 1 50%;
+    padding: 30px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    position: relative;
+    border-radius: 5px;
+    height: 640px;
+
+    & img {
+      position: absolute;
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    position: relative;
+    min-height: 170px;
+    padding: 34px 0 34px 0;
+    background-color: rgba(44, 35, 35, 0.7);
+  }
+
+  &__text {
+    position: relative;
+    text-align: center;
+    padding: 0 75px 0 75px;
+    @include font-param("SFUIDisplay", 18px, #ffffff, 300, 26px);
+    z-index: 11;
+  }
+
+  &__text-sub {
+    position: relative;
+    text-align: center;
+    padding: 0 75px 0 75px;
+    margin-top: 5px;
+    @include font-param("SFUIDisplay", 14px, #ffffff, 300, 22px);
+    z-index: 11;
+  }
+}
+//=============БЛОК-13===================================
+.guarantee {
+  position: relative;
+  padding: 110px 0 210px 0;
+  background: url("../img/guarantee-bg.png") no-repeat center / cover;
+  &__reccircul {
+    position: absolute;
+    top: 89%;
+    left: 24%;
+  }
+  &__row {
+  }
+
+  &__title {
+    color: #2c2323;
+    margin-bottom: 45px;
+  }
+
+  &__subtitle {
+    @include font-param("SFUIDisplay", 30px, #2c2323, 300, 44px);
+    margin-bottom: 50px;
+  }
+
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -50px;
+  }
+
+  &__wrap {
+    flex: 0 1 47%;
+    padding: 0 50px;
+    &:first-child {
+      margin-bottom: 60px;
+      .guarantee__item {
+        &::before {
+          width: 49px;
+          height: 106px;
+          background: url("../img/guarantee/guarantee-image-1.png") no-repeat center / 100%;
+        }
+      }
+    }
+    &:nth-child(2) {
+      margin-bottom: 60px;
+      .guarantee__item {
+        &::before {
+          width: 66px;
+          height: 66px;
+          background: url("../img/guarantee/guarantee-iamge-2.png") no-repeat center / 100%;
+        }
+      }
+    }
+    &:last-child {
+      .guarantee__item {
+        &::before {
+          width: 79px;
+          height: 85px;
+          background: url("../img/guarantee/guarantee-iamge-3.png") no-repeat center / 100%;
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 20px 0 0 100px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__name {
+    margin-bottom: 25px;
+    @include font-param("SFUIDisplay", 30px, #2c2323, 500, 44px);
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    @include font-param("SFUIDisplay", 18px, #2c2323, 300, 26px);
+  }
+
+  &__sub {
+    @include font-param("SFUIDisplay", 14px, #267e96, 300, 22px);
+  }
+}
+//=============БЛОК-14===================================
+.partners {
+  padding: 110px 0 120px 0;
+  border-bottom: 2px solid #f1eeed;
+
+  &__row {
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 1210px;
+    margin-bottom: 55px;
+    text-align: center;
+    color: #2c2323;
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 100px;
+    @include font-param("SFUIDisplay", 26px, #2c2323, 300, 36px);
+  }
+
+  &__wrap {
+    padding: 0 100px;
+  }
+
+  &__slider {
+    position: relative;
+    min-width: 0;
+  }
+
+  &__slide {
+    min-width: 0;
+  }
+
+  &__img {
+    width: 150px;
+    height: 70px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+//=============БЛОК-15===================================
+.question {
+  padding: 110px 0 120px 0;
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 1020px;
+    text-align: center;
+    color: #2c2323;
+    margin-bottom: 85px;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    &:first-child {
+      flex: 0 1 580px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 100px;
+    }
+    &:last-child {
+      flex: 0 1 720px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 50px;
+    & img {
+      max-width: 100%;
+    }
+  }
+
+  &__name {
+    margin-bottom: 5px;
+    @include font-param("SFUIDisplay", 26px, #2c2323, 500, 32px);
+  }
+
+  &__post {
+    @include font-param("SFUIDisplay", 18px, #2c2323, 300, 32px);
+  }
+
+  &__item {
+    padding: 0 0 30px 0;
+  }
+
+  &__issue {
+    position: relative;
+    cursor: pointer;
+    padding: 0 0 0 95px;
+    margin-bottom: 30px;
+    @include font-param("SFUIDisplay", 22px, #2c2323, 500, 32px);
+    & span {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      top: -15px;
+      left: 0;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      font-size: 24px;
+      color: #fff;
+      background-color: #267e96;
+      transition: all 0.3s ease;
+    }
+    &.active {
+      & span {
+        background-color: #da5b57;
+      }
+    }
+  }
+
+  &__text {
+    display: none;
+    padding: 0 0 0 95px;
+    @include font-param("SFUIDisplay", 16px, #2c2323, 300, 24px);
+  }
+}
+
+//=============БЛОК-15===================================
+.social {
+  padding: 130px 0 140px 0;
+  background: url("../img/social-bg.png") no-repeat center / cover;
+  &__row {
+  }
+
+  &__title {
+    color: #2c2323;
+    margin-bottom: 60px;
+  }
+
+  &__subtitle {
+    @include font-param("SFUIDisplay", 30px, #2c2323, 300, 44px);
+    margin-bottom: 95px;
+  }
+
+  &__group {
+    display: flex;
+    margin-bottom: 70px;
+  }
+
+  &__button {
+    &:first-child {
+      margin-right: 25px;
+    }
+    &:nth-child(2) {
+      margin-right: 25px;
+    }
+    & a {
+      padding: 19px 0 19px 0;
+      width: 155px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @include font-param("SFUIDisplay", 15px, #2c2323, 300, 26px);
+  }
+}
+
+.map-position {
+  position: relative;
+  &__container {
+    width: 100%;
+    height: 800px;
+  }
+  &__info {
+  }
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  max-width: 480px;
+  padding: 45px;
+  border-radius: 5px;
+  background: rgba(38, 126, 150, 0.9);
+  &__group-1 {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+  }
+
+  &__group-2 {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    & .card__text {
+      & a {
+        border-bottom: 1px solid #8fb4be;
+      }
+    }
+  }
+
+  &__text {
+    @include font-param("SFUIDisplay", 18px, #ffffff, 300, 28px);
+    & a {
+      color: inherit;
+    }
+    &_margin {
+      margin-right: 25px;
+    }
+  }
+
+  &__ask {
+    margin: 25px 0;
+    @include font-param("SFUIDisplay", 20px, #ffffff, 500, 28px);
+  }
+
+  &__phone {
+    & a {
+      @include font-param("SFUIDisplay", 30px, #ffffff, 300, 32px);
+    }
+  }
+
+  &__button {
+    & a {
+      display: inline-block;
+      padding: 5px 30px 5px 30px;
+      border-radius: 30px;
+      background: #2c2323;
+      @include font-param("SFUIDisplay", 15px, #ffffff, 300, 26px);
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: #fa932c;
+      }
+    }
+  }
+
+  &__text-2 {
+    &_margin {
+      margin-right: 25px;
+    }
+    @include font-param("SFUIDisplay", 16px, #ffffff, 300, 24px);
+  }
+}
+
+//=============POPUP===================================
+.popup {
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 35, 35, 0.5);
+  z-index: 100;
+  transition: all 0.3s ease;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    & .popup__content {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  &__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 55px;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+    max-width: 620px;
+    max-height: 615px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    opacity: 0;
+    transform: translate(0, -100%);
+    transition: all 0.8s ease;
+  }
+
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 21px;
+    height: 21px;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 21px;
+      height: 2px;
+      background-color: #bf5b58;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__title {
+    margin-bottom: 80px;
+    @include font-param("SFUIDisplay", 30px, #2e2828, 300, 44px);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    & input {
+      padding: 12px 15px 12px 35px;
+      margin-bottom: 50px;
+      border-radius: 30px;
+      border: 2px solid #dddddd;
+      @include font-param("SFUIDisplay", 17px, #2e2828, 300, 26px);
+    }
+  }
+
+  &__check {
+    @extend .form-contact__check;
+    margin-bottom: 60px;
+  }
+
+  &__checkmark {
+    border: 2px solid #dddddd;
+    @extend .form-contact__checkmark;
+    &::after {
+      left: 10px !important;
+      top: 5px !important;
+    }
+  }
+
+  &__wrap {
+    text-align: center;
+  }
+
+  &__button {
+    width: 160px;
+    padding: 12px 0 12px 0;
+    border-radius: 30px;
+    background-color: #bf5b58;
+    @include font-param("SFUIDisplay", 17px, #ffffff, 300, 26px);
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: #fa932c;
+    }
+  }
+}

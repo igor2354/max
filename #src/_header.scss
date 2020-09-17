@@ -1,0 +1,194 @@
+.header {
+    position: relative;
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+    }
+
+    &__logo {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -25px;
+            right: -30px;
+            width: 2px;
+            height: 48px;
+            background: #1e1e1e;
+        }
+    }
+
+    &__text {
+        max-width: 230px;
+        @include font-param("SFUIDisplay", 13px, #1e1e1e, 500, 16px);
+    }
+
+    &__email {
+        position: relative;
+        padding-left: 25px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 13px;
+            height: 11px;
+            transform: translate(0, -50%);
+            background: url("../img/icon/email.png");
+        }
+        & a {
+            @include font-param("SFUIDisplay", 15px, #1e1e1e, 500, 26px);
+            border-bottom: 1px solid #565656;
+        }
+    }
+
+    &__ask {
+        max-width: 110px;
+        @include font-param("SFUIDisplay", 15px, #1e1e1e, 500, 20px);
+    }
+
+    &__social {
+        & a {
+            &:first-child {
+                margin-right: 20px;
+            }
+            &:nth-child(2) {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__phone {
+        position: relative;
+        padding-left: 25px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 16px;
+            height: 20px;
+            transform: translate(0, -50%);
+            background: url("../img/icon/phone.png");
+        }
+        & a {
+            @include font-param("SFUIDisplay", 22px, #1e1e1e, 500, 26px);
+        }
+    }
+
+    &__button {
+        & a {
+            display: block;
+            width: 185px;
+            padding: 4px 5px;
+            text-align: center;
+            border-radius: 20px;
+            background-color: #da5b57;
+            @include font-param("SFUIDisplay", 15px, #ffffff, 300, 26px);
+            transition: all 0.3s ease;
+            &:hover {
+                background-color: #fa932c;
+            }
+        }
+    }
+
+    &__icon {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 33px;
+        height: 33px;
+        background: url("../img/icon/header-phone-popup.png") no-repeat center, #da5b57;
+    }
+
+    &__burger {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 33px;
+        height: 33px;
+        background-color: #2c2323;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 9px;
+            left: 10px;
+            width: 14px;
+            height: 2px;
+            background-color: #ffffff;
+        }
+        &::after {
+            top: auto;
+            bottom: 10px;
+        }
+        & span {
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            width: 14px;
+            height: 2px;
+            background-color: #ffffff;
+        }
+    }
+}
+
+.popup-header {
+    padding: 40px;
+    width: 75%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transform: translate(-100%, 0);
+    background: #fff;
+    z-index: 10;
+    transition: all 0.3s ease;
+    &.active {
+        visibility: visible;
+        transform: translate(0, 0);
+    }
+    &__list {
+    }
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 21px;
+        height: 21px;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 21px;
+            height: 2px;
+            background-color: #bf5b58;
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+    &__item {
+        & a {
+            @include font-param("SFUIDisplay", 16px, #2e2828, 300, 54px);
+            &:hover {
+                font-weight: 500;
+            }
+        }
+        &.current {
+            & a {
+                font-weight: 500;
+            }
+        }
+    }
+}

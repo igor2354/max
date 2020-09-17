@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "SFUIDisplay";
+    src: url("../fonts/SFUIDisplay-Bold.eot");
+    src: local("SFUIDisplay-Bold"), url("../fonts/SFUIDisplay-Bold.woff") format("woff"),
+        url("../fonts/SFUIDisplay-Bold.ttf") format("truetype"), url("../fonts/SFUIDisplay-Bold.svg") format("svg");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "SFUIDisplay";
+    src: url("../fonts/SFUIDisplay-Medium.eot");
+    src: local("SFUIDisplay-Medium"), url("../fonts/SFUIDisplay-Medium.woff") format("woff"),
+        url("../fonts/SFUIDisplay-Medium.ttf") format("truetype"), url("../fonts/SFUIDisplay-Medium.svg") format("svg");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "SFUIDisplay";
+    src: url("../fonts/SFUIDisplay-Light.eot");
+    src: local("SFUIDisplay-Light"), url("../fonts/SFUIDisplay-Light.woff") format("woff"),
+        url("../fonts/SFUIDisplay-Light.ttf") format("truetype"), url("../fonts/SFUIDisplay-Light.svg") format("svg");
+    font-weight: 300;
+}

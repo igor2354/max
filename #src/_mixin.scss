@@ -1,0 +1,9 @@
+//========================================================СТИЛИ ШРИФТОВ========================================================
+
+@mixin font-param($family, $size, $color, $weight, $line) {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    line-height: $line;
+}

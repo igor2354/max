@@ -1,0 +1,48 @@
+.footer {
+    background: #2c2323;
+    padding: 50px 0;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__column {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        position: relative;
+        margin-right: 60px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -55px;
+            right: -30px;
+            width: 2px;
+            height: 69px;
+            background: #ffffff;
+        }
+    }
+
+    &__text {
+        max-width: 225px;
+        @include font-param("SFUIDisplay", 13px, #ffffff, 300, 16px);
+    }
+
+    &__policy {
+        margin-right: 50px;
+        & a {
+            border-bottom: 1px solid #524847;
+            opacity: 0.6;
+            @include font-param("SFUIDisplay", 13px, #ffffff, 300, 16px);
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__reserved {
+        @include font-param("SFUIDisplay", 14px, #ffffff, 300, 16px);
+    }
+}
