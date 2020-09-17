@@ -142,12 +142,22 @@ body.lock {
   font-family: "SFUIDisplay";
   font-size: 19px;
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 16px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-red a:hover, .btn-brown a:hover {
+  background-color: #fa932c;
 }
 
 .btn-brown a {
   background-color: #2c2323;
+}
+
+.btn-brown a:hover {
+  background-color: #267e96;
 }
 
 input::-webkit-outer-spin-button,
@@ -157,6 +167,14 @@ input::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+form button.disabled {
+  background-color: gray;
+}
+
+form button.disabled:hover {
+  background-color: gray;
 }
 
 .header {
@@ -277,8 +295,14 @@ input[type="number"] {
   font-family: "SFUIDisplay";
   font-size: 15px;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 300;
   line-height: 26px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header__button a:hover {
+  background-color: #fa932c;
 }
 
 .header__icon {
@@ -882,8 +906,8 @@ input[type="number"] {
 
 .comparison__column {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 470px;
-          flex: 0 1 470px;
+      -ms-flex: 0 1 460px;
+          flex: 0 1 460px;
   padding: 0 6px;
 }
 
@@ -1030,6 +1054,12 @@ input[type="number"] {
   color: #ffffff;
   font-weight: 300;
   line-height: 26px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.form-contact__button:hover, .from-price__button:hover, .form-model__button:hover {
+  background-color: #fa932c;
 }
 
 .form-contact__check, .from-price__check, .popup__check, .form-model__check {
@@ -1761,11 +1791,12 @@ input[type="number"] {
   width: 100%;
   border-radius: 27px;
   background-color: #ffffff;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
   z-index: 10;
 }
 
 .select__option {
-  border-radius: 27px;
   padding: 15px 0 15px 35px;
   font-family: "SFUIDisplay";
   font-size: 17px;
@@ -1776,14 +1807,22 @@ input[type="number"] {
   transition: all 0.3s ease;
 }
 
+.select__option:first-child {
+  border-radius: 27px 27px 0 0;
+}
+
+.select__option:last-child {
+  border-radius: 0 0 27px 27px;
+}
+
 .select__option:hover {
   color: #ffffff;
-  background: #da5b57;
+  background: #267e96;
 }
 
 .select__option_selected {
   color: #ffffff;
-  background: #da5b57;
+  background: #267e96;
 }
 
 .transfer {
@@ -2337,8 +2376,14 @@ input[type="number"] {
   font-family: "SFUIDisplay";
   font-size: 15px;
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 26px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.card__button a:hover {
+  background-color: #fa932c;
 }
 
 .card__text-2 {
@@ -2504,6 +2549,12 @@ input[type="number"] {
   color: #ffffff;
   font-weight: 300;
   line-height: 26px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.popup__button:hover {
+  background-color: #fa932c;
 }
 
 .model {
@@ -2519,6 +2570,7 @@ input[type="number"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-width: 0;
 }
 
 .model__row:first-of-type {
@@ -2600,14 +2652,16 @@ input[type="number"] {
 }
 
 .form-model__sub, .form-model__add {
+  cursor: pointer;
   position: relative;
   width: 24px;
+  height: 24px;
 }
 
 .form-model__sub::before, .form-model__add::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 11px;
   left: 0;
   width: 24px;
   height: 2px;
@@ -2615,13 +2669,16 @@ input[type="number"] {
 }
 
 .form-model__add {
+  cursor: pointer;
   margin-right: 30px;
+  width: 24px;
+  height: 24px;
 }
 
 .form-model__add::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 11px;
   left: 0;
   width: 24px;
   height: 2px;
@@ -2988,28 +3045,18 @@ input[type="number"] {
   line-height: 16px;
 }
 
-/* Слайдер */
-/* Слайдер запущен */
-/* Слайдер с точками */
-/* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
 }
 
-/* Лента слайдов */
 .slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* Слайд */
-/* Слайд активный (показывается) */
-/* Слайд основной */
-/* Слайд по центру */
-/* Клонированный слайд */
 .tabs__slider .slick-arrow {
-  display: none;
+  display: none !important;
 }
 
 /* Стрелка */
@@ -3079,11 +3126,7 @@ input[type="number"] {
   right: -100px;
 }
 
-/* Стрелка не активная */
-/* Точки (булиты) */
-/* Активная точка */
-/* Элемент точки */
-@media (max-width: 1440px) {
+@media (max-width: 1415px) {
   .container {
     max-width: 970px;
   }
@@ -3123,6 +3166,15 @@ input[type="number"] {
     -webkit-box-flex: 0 !important;
         -ms-flex: 0 1 450px !important;
             flex: 0 1 450px !important;
+  }
+  .advantages__column:nth-child(2) {
+    height: 400px;
+  }
+  .advantages__column:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .advantages__column_image {
     margin-bottom: 70px;
@@ -3266,11 +3318,21 @@ input[type="number"] {
   .form-model__check {
     margin-bottom: 20px;
   }
+  .form-model__filter-1, .form-model__filter-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form-model__filter-1 span, .form-model__filter-2 span {
+    margin-bottom: 20px;
+  }
   .form-model__select-1, .form-model__select-2 {
     margin-right: 0;
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 250px;
-            flex: 0 1 250px;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 100%;
   }
   .tabs__property, .tabs__value {
     -webkit-box-flex: 0;
@@ -3602,6 +3664,15 @@ input[type="number"] {
         -ms-flex: 0 1 550px;
             flex: 0 1 550px;
   }
+  .form-model__filter-1, .form-model__filter-2 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .form-model__filter-1 span, .form-model__filter-2 span {
+    margin-bottom: 0px;
+  }
   .form-model__select-1, .form-model__select-2 {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 450px;
@@ -3712,7 +3783,7 @@ input[type="number"] {
     margin-bottom: 35px !important;
   }
   .advantages__item:last-child {
-    margin-bottom: 0 !important;
+    margin-bottom: 35px !important;
   }
   .products {
     padding: 40px 0 10px 0;
@@ -4420,9 +4491,13 @@ input[type="number"] {
   .slider-big .slick-list {
     padding: 0 50px 0 0;
   }
+  .tabs__slider {
+    display: block;
+  }
   .tabs__slide {
     text-align: left;
     margin-right: 20px;
+    min-width: 220px !important;
   }
   .tabs__slider .slick-list {
     padding: 0 50px 0 0;

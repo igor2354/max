@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  //===============SLIDER==========================
   $(".certificate__slider").slick({
     arrows: true,
     slidesToShow: 1,
@@ -25,7 +26,7 @@ $(document).ready(function () {
     slidesToScroll: 3,
     responsive: [
       {
-        breakpoint: 1440,
+        breakpoint: 1415,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -61,7 +62,7 @@ $(document).ready(function () {
     slidesToScroll: 3,
     responsive: [
       {
-        breakpoint: 1440,
+        breakpoint: 1415,
         settings: {
           slidesToShow: 5,
         },
@@ -74,7 +75,7 @@ $(document).ready(function () {
     slidesToScroll: 3,
     responsive: [
       {
-        breakpoint: 1440,
+        breakpoint: 1400,
         settings: {
           slidesToShow: 5,
         },
@@ -108,7 +109,7 @@ $(document).ready(function () {
     asNavFor: ".slider-big",
     responsive: [
       {
-        breakpoint: 1440,
+        breakpoint: 1415,
         settings: {
           slidesToShow: 3,
         },
@@ -176,7 +177,7 @@ $(document).ready(function () {
     $(".quiz__button").css({ display: "none" });
   });
 
-  //===============select=========================
+  //===============SELECT=========================
 
   $(".select__input").on("click", function () {
     $(this).parent().find($(".select__menu")).css({ display: "block" });
@@ -191,7 +192,7 @@ $(document).ready(function () {
     $(this).parent().css({ display: "none" });
   });
 
-  //==============accord====================
+  //==============ACCORDION====================
 
   $(".question__issue").on("click", function () {
     $(".question__issue").not($(this)).removeClass("active");
@@ -234,7 +235,7 @@ $(document).ready(function () {
 
   //=================MATCH=============================================
 
-  let math = [window.matchMedia("(max-width: 1440px)"), window.matchMedia("(max-width: 768px)"), window.matchMedia("(max-width: 500px)")];
+  let math = [window.matchMedia("(max-width: 1415px)"), window.matchMedia("(max-width: 768px)"), window.matchMedia("(max-width: 500px)")];
 
   function resizeBlock() {
     if (math[0].matches) {
@@ -247,7 +248,7 @@ $(document).ready(function () {
   math[0].addListener(resizeBlock);
   resizeBlock();
 
-  function formmMving() {
+  function formmMvung() {
     if (math[1].matches) {
       $(".consultation__form").find(".form-contact__wrpap").before($(".consultation__form").find(".form-contact__check"));
       $(".quiz__form").find(".form-contact__wrpap").before($(".quiz__form").find(".form-contact__check"));
@@ -257,12 +258,12 @@ $(document).ready(function () {
     }
   }
 
-  math[1].addListener(formmMving);
-  formmMving();
+  math[1].addListener(formmMvung);
+  formmMvung();
 
   function activateSlider() {
     if (math[2].matches) {
-      $(".tabs__slider").slick();
+      $(".tabs__slider").slick({ variableWidth: true });
     } else {
       if ($(".tabs__slider").hasClass("slick-initialized")) {
         $(".tabs__slider").slick("unslick");
@@ -271,6 +272,19 @@ $(document).ready(function () {
   }
   math[2].addListener(activateSlider);
   activateSlider();
+
+  function removeClass() {
+    if (!math[1].matches) {
+      $(".tabs__toggle-slide").removeClass("active");
+      $(".tabs__wrap").css({ display: "block" });
+    } else {
+      $(".tabs__toggle-slide").removeClass("active");
+      $(".tabs__wrap").css({ display: "block" });
+    }
+  }
+
+  math[1].addListener(removeClass);
+  removeClass();
 
   //=================TABS============================
   $(".tabs__trigger").on("click", function (event) {
@@ -282,4 +296,41 @@ $(document).ready(function () {
     $($(this).attr("href")).addClass("active");
   });
   $(".tabs__trigger:first").click();
+
+  //================COUNTER FORM INPUT===================
+  $(".form-model_math").on("click", function () {
+    let counter = $(".form-model__counter").val();
+    let text = $(".form-model__cost").find("span").text().split(" ").join("");
+    if ($(this).hasClass("form-model__sub") && counter > 0) {
+      $(".form-model__counter").val(counter - 1);
+
+      $(".form-model__cost")
+        .find("span")
+        .text(Number(text) - 14990);
+    } else {
+      if ($(this).hasClass("form-model__add")) {
+        $(".form-model__counter").val(Number(counter) + 1);
+        $(".form-model__cost")
+          .find("span")
+          .text(Number(text) + 14990);
+      }
+    }
+  });
+});
+
+//================CHECKBOX DISABLED=====================
+
+$("input:checkbox").on("change", function () {
+  let button = $(this).parents("form").find("button");
+  if (!$(this).prop("checked")) {
+    button.prop("disabled", true);
+    button.addClass("disabled");
+  } else {
+    button.prop("disabled", false);
+    button.removeClass("disabled");
+  }
+});
+
+$(window).on("load", function () {
+  $("input:checkbox").prop("checked", true);
 });
